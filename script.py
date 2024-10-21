@@ -11,7 +11,7 @@ from sklearn.metrics import mean_squared_error, r2_score
 X, y = make_regression(n_samples=1000, n_features=10, noise=0.1, random_state=42)
 
 # 2. Split the dataset into training and test sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.4, random_state=42)
 
 # 3. Initialize the models
 lr_model = LinearRegression()         # Linear Regression model
@@ -40,8 +40,9 @@ print("Linear Regression:")
 print(f"Mean Squared Error (MSE): {mse_lr}")
 print(f"R-squared (R²): {r2_lr}\n")
 
-print("Random Forest:")
-print(f"Mean Squared Error (MSE): {mse_rf}")
-print(f"R-squared (R²): {r2_rf}")
+print("Using Random Forest:")
+print(f"Mean Squared Error: {mse_rf}")
+print(f"R-squared: {r2_rf}")
+
 
 
